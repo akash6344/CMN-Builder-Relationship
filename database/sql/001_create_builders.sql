@@ -1,0 +1,25 @@
+-- BRM builders portfolio table (local BRM SQLite / MySQL)
+CREATE TABLE IF NOT EXISTS builders (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    code VARCHAR NOT NULL UNIQUE,
+    owner_name VARCHAR NOT NULL,
+    company_name VARCHAR NOT NULL,
+    city VARCHAR NULL,
+    email VARCHAR NULL,
+    phone VARCHAR NULL,
+    gst VARCHAR NULL,
+    rera VARCHAR NULL,
+    pan VARCHAR NULL,
+    subscription VARCHAR NOT NULL DEFAULT 'Starter',
+    status VARCHAR NOT NULL DEFAULT 'Active',
+    manager VARCHAR NOT NULL DEFAULT 'Anita Rao',
+    projects_count INTEGER NOT NULL DEFAULT 0,
+    revenue_lakhs NUMERIC NOT NULL DEFAULT 0,
+    trust_score INTEGER NOT NULL DEFAULT 80,
+    rating NUMERIC NOT NULL DEFAULT 4.5,
+    kyc_status VARCHAR NOT NULL DEFAULT 'Pending',
+    support_tickets INTEGER NOT NULL DEFAULT 0,
+    featured TINYINT(1) NOT NULL DEFAULT 0,
+    created_at DATETIME NULL,
+    updated_at DATETIME NULL
+);

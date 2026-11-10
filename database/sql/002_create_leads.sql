@@ -1,0 +1,3 @@
+-- Universal leads table lives in CMN-housing/database/database.sqlite
+-- Created by migration: 2026_11_10_221500_create_leads_table.php
+-- BRM and Dashboard read/write this shared table via the `housing` connection.
